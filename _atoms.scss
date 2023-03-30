@@ -1,0 +1,50 @@
+// Styling atoms
+@use 'variables' as *;
+
+@mixin uppercase($color: $text-dark, $size: 1em) {
+    font-size: $size;
+    text-transform: uppercase;
+    color: $color;
+  }
+
+p, a {
+  --wght: 400;
+}
+
+h1, h2, h3, h4 {
+    --wght: 500;
+    // --casl: "CASL" 1;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+header h1 {
+  @include uppercase();
+}
+
+h2 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    color: $text-dark;
+    text-decoration: none;
+    transition: border-color 0.2s ease-in-out;
+  }
+
+a:hover {
+  border-color: $accent1;
+}
+
+footer {
+  a {
+    border: none;
+  }
+}

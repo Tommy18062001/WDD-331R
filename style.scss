@@ -1,0 +1,29 @@
+@use 'atoms';
+@use 'molecules';
+@use 'organisms';
+@use 'variables' as *;
+
+:root {
+  /* set variation axis values */
+  --mono: "MONO" 0; /* Monospace: Sans (natural-width) or Mono (fixed-width) */
+  --casl: "CASL" 0; /* Casual: Linear to Casual */
+  --wght: 300; /* Weight: Light to ExtraBlack; usually set with `font-weight` */
+  --slnt: 0deg; /* Slant: 0 to -15 degrees, auto cursive at -14 */
+  --crsv: "CRSV" 0.5; /* Cursive: always roman (0), auto substitution (.5), or always cursive (1) */
+}
+
+* {
+  font-weight: var(--wght);
+  font-style: oblique var(--slnt);
+  font-variation-settings: var(--mono), var(--casl), var(--crsv);
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $fonts-body;
+}
+
+
+
